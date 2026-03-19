@@ -14,6 +14,6 @@ export default defineConfig({
     }
   },
   base: process.env.NODE_ENV === 'production'
-    ? '/xinkecai.github.io/' // Change 'vue-example' to your repository name for GitHub Pages
-    : '/'             // Use '/' for local development
+    ? '/github-pages-vue/'
+    : '/'
 })

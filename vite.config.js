@@ -13,7 +13,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: process.env.NODE_ENV === 'production' 
-    ? '/vue-example/' // Change 'vue-example' to your repository name for GitHub Pages
+  base: process.env.NODE_ENV === 'production'
+    ? '/xinkecai.github.io/' // Change 'vue-example' to your repository name for GitHub Pages
     : '/'             // Use '/' for local development
 })

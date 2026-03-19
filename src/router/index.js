@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Deploy from '../views/HowToDeploy.vue'  // The component displaying your markdown
 import Home from '../views/Home.vue'  // The component displaying your markdown
+import Project from '../views/Project.vue'
 
 const routes = [
   { path: '/', redirect: '/home' },  // Default route
   { path: '/home', name: 'Home', component: Home },
+  { path: '/project', name: 'Project', component: Project },
   { path: '/deploy', name: 'Deploy', component: Deploy },
 ]
 

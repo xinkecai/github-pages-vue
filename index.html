@@ -5,8 +5,21 @@
     <link rel="icon" href="/github-pages-vue/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DSCI 554 Final Project</title>
-    <script type="module" crossorigin src="/github-pages-vue/assets/index-BVKbDml2.js"></script>
-    <link rel="stylesheet" crossorigin href="/github-pages-vue/assets/index-B8QTcyZM.css">
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search)
+        const redirectedPath = params.get('p')
+        if (!redirectedPath) {
+          return
+        }
+
+        const base = '/github-pages-vue/'.replace(/\/$/, '')
+        const normalizedPath = redirectedPath.startsWith('/') ? redirectedPath : `/${redirectedPath}`
+        window.history.replaceState(null, '', `${base}${normalizedPath}`)
+      })()
+    </script>
+    <script type="module" crossorigin src="/github-pages-vue/assets/index-BndKXIDE.js"></script>
+    <link rel="stylesheet" crossorigin href="/github-pages-vue/assets/index-DQh1aSpK.css">
   </head>
   <body>
     <div id="app"></div>

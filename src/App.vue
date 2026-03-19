@@ -7,7 +7,7 @@ import deploy from './views/HowToDeploy.vue'
     <header>
       <div class="wrapper">
         <!-- Title or Logo -->
-        <h1>Sample Vue App</h1>
+        <h1>DSCI 554 - Data Visualization</h1>
 
         <!-- Navigation Bar -->
         <nav>

@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSCI 554 Final Project</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSCI 554 Final Project</title>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search)
+      const redirectedPath = params.get('p')
+      if (!redirectedPath) {
+        return
+      }
+
+      const base = '%BASE_URL%'.replace(/\/$/, '')
+      const normalizedPath = redirectedPath.startsWith('/') ? redirectedPath : `/${redirectedPath}`
+      window.history.replaceState(null, '', `${base}${normalizedPath}`)
+    })()
+  </script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+
 </html>

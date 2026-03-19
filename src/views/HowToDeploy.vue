@@ -18,7 +18,7 @@ const renderedHtml = ref('Loading...')
 
 onMounted(async () => {
   try {
-    const response = await fetch('/deploy-instructions.md')
+    const response = await fetch(`${import.meta.env.BASE_URL}deploy-instructions.md`)
     if (response.ok) {
       const markdown = await response.text()
       renderedHtml.value = md.render(markdown)
